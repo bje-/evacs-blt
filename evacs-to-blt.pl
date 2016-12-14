@@ -47,7 +47,7 @@ while (<CANDIDATES>) {
     next if (!/^$ecode,/);
     chomp();
     my @fields = split(',');
-    s///g for @fields;
+    s/[\r]//g for @fields;
     $key = $fields[1] . "," . $fields[2];
     $name = $fields[3] . "," . $fields[4];
     $candidates{$key} = $name;
