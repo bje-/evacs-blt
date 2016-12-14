@@ -8,4 +8,4 @@ modern version of Perl and is easy to run. For example:
 
 `$ perl evacs-to-blt.pl Werriwa > Werriwa.blt`
 
-The files are expected to be found in the current directory.
+The EVACS files are expected to be found in the current directory.
