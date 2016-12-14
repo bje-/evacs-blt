@@ -63,7 +63,7 @@ print "1 ";
 
 open BALLOTS, $electorate . "Total.txt";
 while (<BALLOTS>) {
-    next if /batch/;
+    next if /batch.*pindex/;
     chomp();
     my @fields = split(',', $_);
     my $candname = $candidates{$fields[3] . "," . $fields[4]};
