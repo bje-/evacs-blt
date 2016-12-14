@@ -1,7 +1,7 @@
 # evacs-blt
 
 This script converts election data files from the
-[EVACS](www.softimp.com.au/evacs/) format into the BLT format,
+[EVACS](http://www.softimp.com.au/evacs/) format into the BLT format,
 suitable for counting with [OpenSTV](https://www.openstv.org) or
 [OpaVote](https://opavote.org).  The script requires a relatively
 modern version of Perl and is easy to run. For example:
