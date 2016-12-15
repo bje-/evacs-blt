@@ -27,7 +27,7 @@ my %candidates;
 my @names;
 
 # Get electorate code from Electorates.txt.
-open ELECTORATES, "Electorates.txt";
+open ELECTORATES, '<', "Electorates.txt";
 while (<ELECTORATES>) {
     chomp();
     next if /ecode/;
@@ -42,7 +42,7 @@ $ecode >= 0 || die;
 
 # Gather the candidate names.
 my (@fields, $key, $name);
-open CANDIDATES, "Candidates.txt";
+open CANDIDATES, '<', "Candidates.txt";
 while (<CANDIDATES>) {
     next if (!/^$ecode,/);
     chomp();
@@ -61,7 +61,7 @@ printf("%d %d\n", scalar(@names), $nseats);
 # Start of the first ballot.
 print "1 ";
 
-open BALLOTS, $electorate . "Total.txt";
+open BALLOTS, '<', $electorate . "Total.txt";
 while (<BALLOTS>) {
     next if /batch.*pindex/;
     chomp();
