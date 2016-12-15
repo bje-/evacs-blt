@@ -37,7 +37,7 @@ while (<ELECTORATES>) {
     if ($fields[1] eq $electorate) { $ecode = $fields[0]; }
 }
 close ELECTORATES;
-$ecode >= 0 || die;
+$ecode >= 0 or die;
 
 # Gather the candidate names.
 my (@fields, $key, $name);
