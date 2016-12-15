@@ -33,8 +33,7 @@ while (<ELECTORATES>) {
     next if /ecode/;
     my @fields = split(',');
     # strip quotes and newlines
-    s/"//g for @fields;
-    s/[\r]//g for @fields;
+    s/[\r"]//g for @fields;
     if ($fields[1] eq $electorate) { $ecode = $fields[0]; }
 }
 close ELECTORATES;
